@@ -1,0 +1,19 @@
+/* line 6, ../sass/_mixin.scss */
+.example-class {
+  color: white;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1, ../sass/_btn.scss */
+button, button:active, button:hover, button:visited {
+  outline: none;
+}
+
+/* line 4, ../sass/style.scss */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,9 @@
+@mixin example-mixin-color($example-color-primary,$example-color-secondary){
+  color: $example-color-primary;
+  background-color:$example-color-secondary;
+  height: 100%;
+}
+.example-class{
+  @include example-mixin-color(white,red);
+  width: $var-example;
+}
