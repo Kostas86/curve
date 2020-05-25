@@ -6,6 +6,9 @@ body{
   margin: 0;
   padding: 0;
 }
+*{
+  box-sizing: border-box;
+}
 .main-pages{
   position: relative;
   width: 1200px;
@@ -24,6 +27,7 @@ body{
       height: 100%;
       padding-left: 100px;
       padding-bottom: 50px;
+      padding-top: 30px;
     &-vertical{
       height: 100%;
       width: 100px;
@@ -36,7 +40,8 @@ body{
       justify-content: space-between;
       flex-wrap: nowrap;
     }
-    &-horizontal{
+    
+    &-horizontal{ 
       height: 50px;
       width: 100%;
       position: absolute;
@@ -47,6 +52,26 @@ body{
       align-items: center;
       justify-content: space-between;
       flex-wrap: nowrap;
+    }
+    &-top{ 
+      height: 30px;
+      width: calc(100% - 100px);
+      position: absolute;
+      left: 100px;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+    &-wrap{ 
+      height: 100%;
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      border: 1px solid green;
     }
   }
 }
