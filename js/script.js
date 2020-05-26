@@ -15,6 +15,12 @@ $(document).ready(function(){
         titleBar.append(curveNameContent);
         fTest(curveName);
         console.log(content);
+
+        let curveDataType = content.dataType;
+        let curveDataTypeContent = '<p>' + curveDataType + '<p>';
+        dataBar.append(curveDataTypeContent);
+        fTest(curveDataType);
+        console.log(content);
     }
     function fTest(item){
         console.log(item);
