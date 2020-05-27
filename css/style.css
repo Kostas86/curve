@@ -60,8 +60,16 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
-/* line 44, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
+.curve-content-vertical p {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+/* line 52, ../sass/style.scss */
 .curve-content-horizontal {
   height: 50px;
   width: 100%;
@@ -73,8 +81,13 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+  padding-left: 100px;
 }
-/* line 56, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
+.curve-content-horizontal p {
+  margin: 0 10px;
+}
+/* line 68, ../sass/style.scss */
 .curve-content-top {
   height: 30px;
   width: calc(100% - 100px);
@@ -87,7 +100,7 @@ body {
   justify-content: center;
   flex-wrap: nowrap;
 }
-/* line 68, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .curve-content-wrap {
   height: 100%;
   width: 100%;

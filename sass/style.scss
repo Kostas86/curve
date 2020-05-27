@@ -39,6 +39,14 @@ body{
       align-items: center;
       justify-content: space-between;
       flex-wrap: nowrap;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      overflow: hidden;
+      p{
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        
+      }
     }
     
     &-horizontal{ 
@@ -52,6 +60,10 @@ body{
       align-items: center;
       justify-content: space-between;
       flex-wrap: nowrap;
+      padding-left: 100px;
+      p{
+        margin: 0 10px;
+      }
     }
     &-top{ 
       height: 30px;
