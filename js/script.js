@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    let curveUrl = $("[data-js-curve]").attr("data-js-curve");
-    let valueBar = $(".curve-content-vertical");
-    let dataBar = $(".curve-content-horizontal");
-    let titleBar = $(".curve-content-top");
-    let curveWrap = $(".curve-content-wrap");
+    let curveUrl = $("[data-js-curve]").attr("data-js-curve"); //записываем обект с кривой
+    let valueBar = $(".curve-content-vertical");  //записываем область для значений
+    let dataBar = $(".curve-content-horizontal");  //записываем область для дат
+    let titleBar = $(".curve-content-top"); //записываем область для названий кривых
+    let curveWrap = $(".curve-content-wrap"); //записываем область для точек графика
 
 
-    $.getJSON(curveUrl, function (data) {
-        initStart(data);
+    $.getJSON(curveUrl, function (data) { //функция получения базы из JSON
+        initStart(data); //запускаем скрипт по загрузке БД
     });
-    function initStart(content) {
-        console.log(content);
-        contentOut(titleBar, content.name);
-        let valueMax = 0;
-        let valueMin = +content.content[0].value;
+    function initStart(content) {//основная функция скрипта
+        console.log(content);//вывод БД в консоль для просмотра содержимого
+        contentOut(titleBar, content.name);//вывод названия кривой
+        let valueMax = 0;//переменная с минимальным значением
+        let valueMin = +content.content[0].value;//переменная с максимальным значением
 
         let dataMax = 0;
         let dataMin = convertDate(content.content[0].date);
