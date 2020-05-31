@@ -16,7 +16,7 @@ $(document).ready(function () {
         let valueMin = +content.content[0].value;//переменная с максимальным значением
 
         let dataMax = 0;
-        let dataMin = convertDate(content.content[0].date);
+        let dataMin = convertDate( "day",content.content[0].date);
         
         for (i = 0; i <= content.content.length - 1; i++) {
             if (valueMax < +content.content[i].value) {
@@ -40,11 +40,19 @@ $(document).ready(function () {
             tempValue -= rangeValueStep;
             contentOut(valueBar, Math.round(tempValue));   
         };
-        
         contentOut(valueBar, valueMin);
         
+        let rangeData = dataMax - dataMin;
+        let rangeDataStep = (rangeData - 2) / 8;
+        let tempData = dataMin;
         contentOut(dataBar, dataMin);
+        for(i = 0; i <= 7;i++){
+            tempData += rangeDataStep;
+            contentOut(dataBar, Math.round(tempData));
+        };
         contentOut(dataBar, dataMax);
+
+        curvePointOut ('#ff0000', 50, 50);
     }
     function contentOut(place, item) {
         let htmlContent = '<p>' + item + '</p>';
@@ -68,5 +76,9 @@ $(document).ready(function () {
     function fTest(item) {
         console.log(item);
     }
+    function curvePointOut (color, left, top){
+        let dotContent = '<div class="dot" style="background-color: ' + color + ';left:' + left + '%' + ';top: ' + top + '%' + ';"></div>';
+        curveWrap.append(dotContent);
+    };
 
 });

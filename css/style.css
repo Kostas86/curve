@@ -109,3 +109,10 @@ body {
   top: 0;
   border: 1px solid green;
 }
+/* line 87, ../sass/style.scss */
+.curve-content-wrap .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+}
