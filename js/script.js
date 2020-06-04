@@ -52,7 +52,18 @@ $(document).ready(function () {
         };
         contentOut(dataBar, dataMax);
 
-        curvePointOut ('#ff0000', 50, 50);
+        let valueStep = 100/rangeValue;
+        let dataStep = 100/rangeData;
+
+        for (i=0; i<content.content.length; i++){
+           objectPosition(content.content[i]); 
+        };
+        function objectPosition (item){
+            let left = (convertDate("day", item.date)-dataMin)*dataStep;
+            let top = (rangeValue - (item.value - valueMin)) * valueStep;
+            curvePointOut (content.color, left, top);
+        };
+        
     }
     function contentOut(place, item) {
         let htmlContent = '<p>' + item + '</p>';
@@ -77,7 +88,7 @@ $(document).ready(function () {
         console.log(item);
     }
     function curvePointOut (color, left, top){
-        let dotContent = '<div class="dot" style="background-color: ' + color + ';left:' + left + '%' + ';top: ' + top + '%' + ';"></div>';
+        let dotContent = '<div class="dot" style="background-color: ' + color + ';left:' + left + '%;top: ' + top + '%;"></div>';
         curveWrap.append(dotContent);
     };
 
