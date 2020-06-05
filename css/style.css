@@ -85,7 +85,7 @@ body {
 }
 /* line 64, ../sass/style.scss */
 .curve-content-horizontal p {
-  margin: 0 10px;
+  margin: 0;
 }
 /* line 68, ../sass/style.scss */
 .curve-content-top {
@@ -111,6 +111,13 @@ body {
 }
 /* line 87, ../sass/style.scss */
 .curve-content-wrap .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+}
+/* line 93, ../sass/style.scss */
+.curve-content-wrap .smallDot {
   width: 4px;
   height: 4px;
   border-radius: 50%;

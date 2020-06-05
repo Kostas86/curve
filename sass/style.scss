@@ -62,7 +62,7 @@ body{
       flex-wrap: nowrap;
       padding-left: 100px;
       p{
-        margin: 0 10px;
+        margin: 0;
       }
     }
     &-top{ 
@@ -85,6 +85,12 @@ body{
       top: 0;
       border: 1px solid green;
       .dot{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .smallDot{
         width: 4px;
         height: 4px;
         border-radius: 50%;

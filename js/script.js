@@ -63,6 +63,12 @@ $(document).ready(function () {
             let top = (rangeValue - (item.value - valueMin)) * valueStep;
             curvePointOut (content.color, left, top);
         };
+        smallPointOut('green',1 , 90);
+        smallPointOut('green',2 , 89);
+        smallPointOut('green',3 , 87);
+        smallPointOut('green',4 , 85);
+        smallPointOut('green',5 , 84);
+
         
     }
     function contentOut(place, item) {
@@ -90,6 +96,10 @@ $(document).ready(function () {
     function curvePointOut (color, left, top){
         let dotContent = '<div class="dot" style="background-color: ' + color + ';left:' + left + '%;top: ' + top + '%;"></div>';
         curveWrap.append(dotContent);
+    };
+    function smallPointOut (color, left, top){
+        let smallDotContent = '<div class="smallDot" style="background-color: ' + color + ';left:' + left + '%;top: ' + top + '%;"></div>';
+        curveWrap.append(smallDotContent);
     };
 
 });
